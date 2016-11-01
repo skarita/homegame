@@ -2,13 +2,13 @@
   <h2>Upcoming Home Games</h2>
   <form action="/games">
   <select name="search-by-city">
-    <!-- <% @cities.each do |city| %>
+    <% @cities.each do |city| %>
       <% if city == @current_city %>
       <option value="<%=city%>" selected><%=city%></option>
       <%else%>
       <option value="<%=city%>"><%=city%></option>
       <%end%>
-    <%end%> -->
+    <%end%>
   </select>
   <button>Search</button>
   </form>

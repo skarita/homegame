@@ -12,7 +12,7 @@ enable :sessions
 helpers do
 
   def current_user
-    User.find_by(id: sesssion[:user_id])
+    User.find_by(id: session[:user_id])
   end
 
   def logged_in?
@@ -38,6 +38,10 @@ post '/session' do
     # Stay at the login form
     erb :login
   end
+end
+
+get '/session/signup' do
+  erb :signup
 end
 # Delete session
 get '/session/logout' do
@@ -73,6 +77,16 @@ get '/games' do
     @games = Game.order('post_date DESC')
   end
 
+  erb :games_all
+end
+
+# Create new home game form
+get '/games/new' do
+  if logged_in?
+    erb :new_game
+  else
+    erb :signup
+  end
 end
 
 post '/games' do
@@ -131,6 +145,6 @@ post "/signup/new" do
     erb :login
   else
     @note = "Email address already exists!"
-    erb :register
+    erb :signup
   end
 end

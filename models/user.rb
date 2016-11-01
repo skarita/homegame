@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
    has_secure_password
    belongs_to :user_type
-   has_many :games
+   belongs_to :game
    has_many :reservations
 end
