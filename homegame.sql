@@ -30,7 +30,7 @@ CREATE TABLE reservations (
 CREATE TABLE games (
   id SERIAL4 PRIMARY KEY,
   game_id INTEGER,
-  game_date VARCHAR(100),
+  game_date DATE,
   buy_in INTEGER,
   game_type VARCHAR(100),
   address VARCHAR(200),
