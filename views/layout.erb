@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HomeGame</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="navbar">
+
+      <ul class="navigation">
+        <li class="header-link"><a href="/games">Games</a></li>
+
+        <% if logged_in? %>
+          <!-- display username -->
+
+          <!-- Log Out Button -->
+
+          <% else %>
+
+          <!-- sign up -->
+          <% end %>
+
+      </ul>
+
+
+    </nav>
+
+    <%= yield %>
+
+  </div>
+
+</body>
+</html>
