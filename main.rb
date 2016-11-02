@@ -74,7 +74,7 @@ get '/games' do
     @current_city = params[:search_by_city]
   else
     # get all games
-    @games = Game.order('post_date DESC')
+    @games = Game.order('gate_date')
   end
 
   erb :games_all
@@ -126,11 +126,11 @@ post "/signup/new" do
   user.email = params[:input_email]
   user.password = params[:input_password]
 
-  if User.all.size == 0
-    user.user_type_id = 2 # set user as host
-  else
-    user.user_type_id = 1 # set user as player
-  end
+  # if User.all.size == 0
+  #   user.user_type_id = 2 # set user as host
+  # else
+  #   user.user_type_id = 1 # set user as player
+  # end
 
   exist = false
   users = User.all

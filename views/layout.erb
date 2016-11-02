@@ -11,7 +11,10 @@
   <div class="wrapper">
     <nav class="navbar">
 
+      <a href="/"><img src="/css/images/clover-logo.jpg" class="logo"></a>
+
       <ul class="navigation">
+
         <li class="header-link"><a href="/">Home</a></li>
         <li class="header-link"><a href="/games">Games</a></li>
         <li class="header-link"><a href="/about">About</a></li>
@@ -21,11 +24,11 @@
           <!-- display username -->
 
           <!-- Log Out Button -->
-          <a href="/session/logout">Logout</a>
+          <li class="header-link"><a href="/session/logout">Logout</a></li>
           <% else %>
-            <a href="/session/new">Login</a>
+          <li class="header-link"><a href="/session/new">Login</a></li>
           <!-- sign up -->
-            <a href="/session/signup">Signup</a>
+          <li class="header-link"><a href="/session/signup">Signup</a></li>
           <% end %>
 
       </ul>
