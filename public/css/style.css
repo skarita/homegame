@@ -1,6 +1,6 @@
 body {
-  /*background-image: url("/css/images/suits-background.jpg");
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%), url("/css/images/suits-background.jpg");*/
+  background-image: url("/css/images/suits-background.jpg");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%), url("/css/images/suits-background.jpg");
   font-family: helvetica, arial;
   margin: 0 auto;
   text-align: center;
@@ -28,4 +28,30 @@ body {
   text-align: center;
   margin-left: 30px;
   cursor: pointer;
+}
+
+.navbar {
+  background-color: #18453B;
+  color: #8FBC8F;
+  text-decoration: none;
+}
+.navbar a:visited {
+  text-decoration: none;
+  color: #8FBC8F;
+}
+.navbar a:hover {
+  color: red;
+}
+
+
+.index-body {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding-left: 10px
 }

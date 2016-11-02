@@ -50,19 +50,7 @@ get '/session/logout' do
 end
 
 get '/' do
-  erb :index
-end
-
-get '/about' do
-  erb :about
-end
-
-get '/login' do
-  erb :login
-end
-
-get '/games' do
-  all_games = game.all
+  all_games = Game.all
   all_city = []
   all_games.each do |each|
     all_city << each.city
@@ -75,6 +63,34 @@ get '/games' do
   else
     # get all games
     @games = Game.order('gate_date')
+  end
+
+
+  erb :index
+end
+
+get '/about' do
+  erb :about
+end
+
+get '/login' do
+  erb :login
+end
+
+get '/games' do
+  all_games = Game.all
+  all_city = []
+  all_games.each do |each|
+    all_city << each.city
+  end
+  @cities = all_city.uniq
+
+  if params[:search_by_city] != nil
+    @games = Game.where(city: params[:search_by_city]).order('game_date')
+    @current_city = params[:search_by_city]
+  else
+    # get all games
+    @games = Game.order('game_date')
   end
 
   erb :games_all
@@ -91,11 +107,11 @@ end
 
 post '/games' do
   new_game = Game.new
-  new_game.date = params[:input_date]
-  new_game.buyin = params[:input_buyin]
+  new_game.game_date = params[:input_date]
+  new_game.buy_in = params[:input_buyin]
   new_game.address = params[:input_address]
   new_game.city = params[:input_city]
-  new_game.description = param[:input_description]
+  new_game.description = params[:input_description]
   new_game.save
 
   redirect to '/games'
