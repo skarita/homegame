@@ -1,6 +1,6 @@
 body {
-  background-image: url("/css/images/suits-background.jpg");
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%), url("/css/images/suits-background.jpg");
+  /*background-image: url("/css/images/suits-background.jpg");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%), url("/css/images/suits-background.jpg");*/
   font-family: helvetica, arial;
   margin: 0 auto;
   text-align: center;
@@ -16,7 +16,7 @@ body {
 }
 
 .logo {
-  height: 32px;
+  height: 28px;
   float: left;
   margin: 17px 0 0 15px;
 }

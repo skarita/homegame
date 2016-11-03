@@ -50,21 +50,22 @@ get '/session/logout' do
 end
 
 get '/' do
-  all_games = Game.all
+  @all_games = Game.all
   all_city = []
-  all_games.each do |each|
+
+  #
+  @all_games.each do |each|
     all_city << each.city
   end
   @cities = all_city.uniq
 
   if params[:search_by_city] != nil
-    @games = Game.where(city: params[:search_by_city]).order('post_date DESC')
+    @games = Game.where(city: params[:search_by_city]).order('game_date')
     @current_city = params[:search_by_city]
   else
     # get all games
     @games = Game.order('gate_date')
   end
-
 
   erb :index
 end
@@ -78,9 +79,11 @@ get '/login' do
 end
 
 get '/games' do
-  all_games = Game.all
+  @all_games = Game.all
   all_city = []
-  all_games.each do |each|
+
+  #
+  @all_games.each do |each|
     all_city << each.city
   end
   @cities = all_city.uniq
@@ -118,17 +121,9 @@ post '/games' do
 end
 
 # Show single game details
-get "/games/:id" do
-  if logged_in?
-    @game = Game.find(params[:id])
-    @user = @game.user
-    if @user == nil
-      redirect to "/games"
-    end
+get "/games/show" do
+  @game = Game.find(params[:id])
     erb :game_show
-  else
-    erb :login
-  end
 end
 
 get "/signup" do

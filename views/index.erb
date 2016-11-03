@@ -15,4 +15,9 @@
 
   <button><a class="create-game" href="/games/new">Create my home game</a></button>
 
+
+  <% @all_games.each do | game | %>
+    <p> <a href="/games/show?id=<%=game.id%>"><%= game.game_date %> <%= game.city %> $<%= game.buy_in %> @<%= game.address %> <%= game.description %></a> </p>
+
+  <% end %>
 </section>
