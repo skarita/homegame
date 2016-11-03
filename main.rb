@@ -60,11 +60,11 @@ get '/' do
   @cities = all_city.uniq
 
   if params[:search_by_city] != nil
-    @games = Game.where(city: params[:search_by_city]).order('game_date DESC')
+    @games = Game.where(city: params[:search_by_city]).order('game_date')
     @current_city = params[:search_by_city]
   else
     # get all games
-    @games = Game.order('game_date DESC')
+    @games = Game.order('game_date')
   end
 
   erb :index
@@ -87,10 +87,11 @@ get '/games' do
     all_city << each.city
   end
   @cities = all_city.uniq
+# binding.pry
+  if params['search-by-city'] != nil
+    @games = Game.where(city: params['search-by-city']).order('game_date')
+    @current_city = params['search-by-city']
 
-  if params[:search_by_city] != nil
-    @games = Game.where(city: params[:search_by_city]).order('game_date')
-    @current_city = params[:search_by_city]
   else
     # get all games
     @games = Game.order('game_date')
@@ -168,4 +169,9 @@ post "/signup/new" do
     @note = "Email address already exists!"
     erb :signup
   end
+end
+
+get "/profile/:id" do
+  @user = User.find(session[:user_id])
+  erb :profile
 end

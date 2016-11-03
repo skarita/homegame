@@ -2,6 +2,7 @@
   <h2>Upcoming Home Games</h2>
   <form action="/games">
   <select name="search-by-city">
+    <!-- <option value=""></option> -->
     <% @cities.each do |city| %>
       <% if city == @current_city %>
       <option value="<%=city%>" selected><%=city%></option>
@@ -12,11 +13,11 @@
   </select>
   <button>Search</button>
   </form>
-
+  <button><a class="all-games" href="/games">List all games</a></button><br>
   <button><a class="create-game" href="/games/new">Create my home game</a></button>
 
 
-  <% @all_games.each do | game | %>
+  <% @games.each do | game | %>
     <p> <a href="/games/<%=game.id%>"><%= game.game_date %> <%= game.city %> $<%= game.buy_in %> @<%= game.address %></a></p>
 
   <% end %>

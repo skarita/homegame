@@ -40,7 +40,7 @@
     <div class="page-header">
       <% if logged_in? %>
       <h5>Welcome <%= current_user.name %>!
-        <!-- <button class="accountBtn"><a href="/profile">My Profile</a></button> -->
+        <button class="accountBtn"><a href="/profile/<%= params[:id] %>">View my profile</a></button>
       <% end %>
     </div>
 
