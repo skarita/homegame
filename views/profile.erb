@@ -1,0 +1,12 @@
+<section class="profile">
+  <h3>My Profile</h3>
+  <p>Name: <%=@user.name%></p>
+  <p>Email: <%=@user.email%></p>
+
+  <h4>RSVP'd Games:</h4>
+  <p>Attending: </p>
+  <% @all_games.each do | game | %>
+  <p><a href="/games/<%=games.id%>">
+  </a></p>
+  <%end%>
+</section>
