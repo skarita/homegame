@@ -25,6 +25,7 @@
 
           <!-- Log Out Button -->
           <li class="header-link"><a href="/session/logout">Logout</a></li>
+
           <% else %>
           <li class="header-link"><a href="/session/new">Login</a></li>
           <!-- sign up -->
@@ -35,6 +36,13 @@
 
 
     </nav>
+
+    <div class="page-header">
+      <% if logged_in? %>
+      <h5>Welcome <%= current_user.name %>!
+        <!-- <button class="accountBtn"><a href="/profile">My Profile</a></button> -->
+      <% end %>
+    </div>
 
     <%= yield %>
 

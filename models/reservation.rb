@@ -1,4 +1,4 @@
 class Reservation < ActiveRecord::Base
-   has_many :users
-   has_many :games
+   belongs_to :users
+   belongs_to :games
 end

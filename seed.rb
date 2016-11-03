@@ -1,1 +1,3 @@
-User.create name: 'test' email: 'test@test.com' password: 'test' 
+User.create name: 'test' email: 'test@test.com' password: 'test'
+
+Game.create

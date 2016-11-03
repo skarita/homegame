@@ -11,17 +11,13 @@
     <%end%>
   </select>
   <button>Search</button>
-</form>
-<br/>
-<button class="allBtn"><a href='/games'>All</a></button><br/>
-<% @games.each do |game| %>
-  <p>
-    <a class="games" href="/games/<%=game.id%>">
-    </a>
-  </p>
-  <%end%>
-
+  </form>
 
   <button><a class="create-game" href="/games/new">Create my home game</a></button>
 
+
+  <% @all_games.each do | game | %>
+    <p> <a href="/games/show?id=<%=game.id%>"><%= game.game_date %> <%= game.city %> $<%= game.buy_in %> @<%= game.address %></a></p>
+
+  <% end %>
 </section>

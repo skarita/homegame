@@ -60,11 +60,11 @@ get '/' do
   @cities = all_city.uniq
 
   if params[:search_by_city] != nil
-    @games = Game.where(city: params[:search_by_city]).order('game_date')
+    @games = Game.where(city: params[:search_by_city]).order('game_date DESC')
     @current_city = params[:search_by_city]
   else
     # get all games
-    @games = Game.order('gate_date')
+    @games = Game.order('game_date DESC')
   end
 
   erb :index

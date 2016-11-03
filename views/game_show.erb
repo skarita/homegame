@@ -1,17 +1,19 @@
 <section class="game-show">
   <a href="/games">Back to games list</a>
   <h2>Game Details</h2>
-  <h4>Date</h4>
+  <h4>Date:</h4>
   <p><%= @game.game_date %></p>
   <h4>Game type: </h4>
   <p><%= @game.game_type %></p>
   <h4>Buyin:</h4>
-  <p><%= @game.buy_in %></p>
+  <p>$<%= @game.buy_in %></p>
   <h4>City:</h4>
   <p><%= @game.city %></p>
   <h4>Address:</h4>
   <p><%= @game.address %>
   <h4>Description:</h4>
   <p><%= @game.description %></h4>
-
+    <form action="/">
+      <button>RSVP</button>
+    </form>
 </section>
