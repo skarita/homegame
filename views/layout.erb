@@ -10,6 +10,7 @@
 <body>
   <div class="wrapper">
     <nav class="navbar">
+      <div class="top-nav">
 
       <a href="/"><img src="/css/images/homegamelogo.png" class="logo"></a>
 
@@ -31,18 +32,19 @@
           <!-- sign up -->
           <li class="header-link"><a href="/session/signup">Signup</a></li>
           <% end %>
-
+        </div>
+          <aside class="page-header">
+            <% if logged_in? %>
+            <h5>Welcome <%= current_user.name %>!
+              <button class="accountBtn"><a href="/">View my profile</a></button>
+            <% end %>
+          </aside>
       </ul>
 
 
     </nav>
 
-    <div class="page-header">
-      <% if logged_in? %>
-      <h5>Welcome <%= current_user.name %>!
-        <button class="accountBtn"><a href="/profile/<%= params[:id] %>">View my profile</a></button>
-      <% end %>
-    </div>
+
 
     <%= yield %>
 

@@ -1,11 +1,14 @@
 body {
-  background-image: url("/css/images/suits-background.jpg");
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%), url("/css/images/suits-background.jpg");
+  background: url("/css/images/suits.jpg") no-repeat center center fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%), url("/css/images/suits.jpg") no-repeat center center fixed;
   font-family: helvetica, arial;
   margin: 0 auto;
   text-align: center;
   height: 100%;
-
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .navigation {
@@ -43,7 +46,6 @@ body {
   color: red;
 }
 
-
 .index-body {
   text-align: center;
   width: 80%;
@@ -53,5 +55,54 @@ body {
   min-height: 400px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
-  padding-left: 10px
+  padding-left: 10px;
+}
+
+.game-show, .login-body,  .new-game, .signup {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-bottom: 8px;
+}
+
+.about {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.page-header {
+  text-align: left;
+  padding-left: 20px;
+  margin-top: -2px;
+  padding-bottom: 0.1px;
+}
+
+.accountBtn {
+  border-radius: 20px;
+  background-color: #FFF;
+}
+
+.accountBtn a:hover {
+  text-decoration: none;
+}
+/*
+.top-nav {
+  padding-bottom: 4px;
+}*/
+
+button {
+  border-radius: 40px;
+  margin-left: 5px;
+  background-color: #fcd856;
 }
