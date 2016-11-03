@@ -14,14 +14,8 @@
   <h4>Description:</h4>
   <p><%= @game.description %></h4>
 
-    <% if logged_in? %>
     <form action="/games/rsvp/<%= params[:id] %>" method="post">
       <button>RSVP</button>
     </form>
-    <% else %>
-    <form action="/session/new" method="get">
-      <button>RSVP</button>
-    </form>
-    <% end %>
-
+    <p>Thank you, RSVP confirmed!</p>
 </section>

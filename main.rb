@@ -121,9 +121,19 @@ post '/games' do
 end
 
 # Show single game details
-get "/games/show" do
+get "/games/:id" do
   @game = Game.find(params[:id])
-    erb :game_show
+  erb :game_show
+end
+
+post "/games/rsvp/:id" do
+  new_reservation = Reservation.new
+  new_reservation.user_id = current_user.id
+  new_reservation.game_id = params[:id]
+  new_reservation.save
+
+  @game = Game.find(params[:id])
+  erb :games_rsvp
 end
 
 get "/signup" do
