@@ -159,3 +159,43 @@ body {
 #accountBtn a:hover {
   color: #e8554e;
 }
+p a:hover {
+  color: #e8554e;
+}
+
+.index-body .btns {
+  color: #1c2f2f;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #4d4d4d;
+}
+
+.checkbox a:hover {
+  color: #e8554e;
+}
+
+.checkbox a:hover {
+  color: #e8554e;
+}
+
+.signup-form {
+  text-align: left;
+  padding-left: 43%;
+  font-size: .9em;
+}
+
+.login-form {
+  text-align: left;
+  padding-left: 43%;
+  font-size: .9em;
+}
+
+.new-account {
+  text-align: left;
+  padding-top: 10px;
+}

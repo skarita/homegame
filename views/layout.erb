@@ -35,9 +35,9 @@
         </div>
           <aside class="page-header">
             <% if logged_in? %>
-            <h5
-            welcome">Welcome <%= current_user.name %>!
+            <h5 id="welcome">Welcome <%= current_user.name %>!
               <button id="accountBtn"><a href="/">Profile</a></button>
+            </h5>
             <% end %>
           </aside>
       </ul>
