@@ -1,7 +1,7 @@
 body {
   background: url("/css/images/suits.jpg") no-repeat center center fixed;
   background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%), url("/css/images/suits.jpg") no-repeat center center fixed;
-  font-family: helvetica, arial;
+  font-family: Tahoma, Geneva, sans-serif;
   margin: 0 auto;
   text-align: center;
   height: 100%;
@@ -9,6 +9,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-decoration: none;
 }
 
 .navigation {
@@ -16,6 +17,7 @@ body {
   text-align: right;
   margin: 0 15px 0 0;
   padding: 18px 0;
+  text-decoration: none;
 }
 
 .logo {
@@ -31,19 +33,28 @@ body {
   text-align: center;
   margin-left: 30px;
   cursor: pointer;
+  text-decoration: none;
+  color: #8FBC8F;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+.header-link a:visited {
+  text-decoration: none;
 }
 
 .navbar {
   background-color: #18453B;
-  color: #8FBC8F;
+
   text-decoration: none;
 }
-.navbar a:visited {
+.top-nav a:visited {
   text-decoration: none;
   color: #8FBC8F;
 }
-.navbar a:hover {
-  color: red;
+.top-nav a:hover {
+  color: #e8554e;
+}
+.navbar a {
+  text-decoration: none;
 }
 
 .index-body {
@@ -56,6 +67,7 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   padding-left: 10px;
+  text-decoration: none;
 }
 
 .game-show, .login-body,  .new-game, .signup {
@@ -88,21 +100,62 @@ body {
   padding-bottom: 0.1px;
 }
 
-.accountBtn {
-  border-radius: 20px;
-  background-color: #FFF;
+#accountBtn {
+  border-radius: 40px;
+  margin-left: 5px;
+  background-color: #fcd856;
+  color: #1c2f2f;
+  text-decoration: none;
 }
 
-.accountBtn a:hover {
+.navbar a:visited #accountBtn {
   text-decoration: none;
+  border-radius: 40px;
+  margin-left: 5px;
+  background-color: #fcd856;
+  color: #1c2f2f;
 }
 /*
 .top-nav {
   padding-bottom: 4px;
 }*/
 
-button {
+
+.btns {
+  text-decoration: none;
   border-radius: 40px;
   margin-left: 5px;
   background-color: #fcd856;
+  color: #1c2f2f;
+}
+
+.a {
+  text-decoration: none;
+}
+.btns a:hover {
+  color: #e8554e;
+}
+
+#welcome {
+  color: #8FBC8F;
+}
+
+.index-body .btns {
+  text-decoration: none;
+  border-radius: 40px;
+  margin-left: 5px;
+  background-color: #fcd856;
+  color: #1c2f2f;
+}
+
+.index-body a {
+  text-decoration: none;
+}
+
+.index-body a:hover {
+  text-decoration: none;
+}
+
+#accountBtn a:hover {
+  color: #e8554e;
 }
